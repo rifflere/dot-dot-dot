@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Dot Dot</title>
+    <link rel="stylesheet" href="styles\style.css">
+</head>
+<body>
+    <div id="large-screen-flex">
+        <div class="flexbox">
+            <div class="dot"><a href="art">art</a></div>
+            <div class="dot"><a href="add">add</a></div>
+            <div class="dot"><a href="about">about</a></div>
+        </div>
+        <main>
+            <h1>dot dot dot</h1>
+            <h2>Add your dot:</h2>
+            <form action="/submit" method="POST" id="art-form">
+                <label> Select a color:
+                </label>
+                <select name="color" id="color" style="background-color: white;" value="<%= data.color %>">
+                    <option value="White" style="background-color: white;">White</option>
+                    <option value="Silver" style="background-color: Silver;">Silver</option>
+                    <option value="Gray" style="background-color: Gray;">Gray</option>
+                    <option value="Black" style="background-color: Black; color: white;">Black</option>
+                    <option value="Red" style="background-color: Red;">Red</option>
+                    <option value="Maroon" style="background-color: Maroon; color: white;">Maroon</option>
+                    <option value="Yellow" style="background-color: Yellow;">Yellow</option>
+                    <option value="Olive" style="background-color: Olive; color: white;">Olive</option>
+                    <option value="Lime" style="background-color: Lime;">Lime</option>
+                    <option value="Green" style="background-color: Green; color: white;">Green</option>
+                    <option value="Aqua" style="background-color: Aqua;">Aqua</option>
+                    <option value="Teal" style="background-color: Teal; color: white;">Teal</option>
+                    <option value="Blue" style="background-color: Blue; color: white;">Blue</option>
+                    <option value="Navy" style="background-color: Navy; color: white;">Navy</option>
+                    <option value="Fuchsia" style="background-color: Fuchsia;">Fuchsia</option>
+                    <option value="Purple" style="background-color: Purple; color: white;">Purple</option>
+                    <option value="MediumVioletRed" style="background-color: MediumVioletRed;">MediumVioletRed</option>
+                    <option value="DeepPink" style="background-color: DeepPink;">DeepPink</option>
+                    <option value="HotPink" style="background-color: HotPink;">HotPink</option>
+                    <option value="DarkRed" style="background-color: DarkRed; color: white;">DarkRed</option>
+                    <option value="FireBrick" style="background-color: FireBrick;">FireBrick</option>
+                    <option value="Crimson" style="background-color: Crimson;">Crimson</option>
+                    <option value="IndianRed" style="background-color: IndianRed;">IndianRed</option>
+                    <option value="Salmon" style="background-color: Salmon;">Salmon</option>
+                    <option value="OrangeRed" style="background-color: OrangeRed;">OrangeRed</option>
+                    <option value="Tomato" style="background-color: Tomato;">Tomato</option>
+                    <option value="DarkOrange" style="background-color: DarkOrange;">DarkOrange</option>
+                    <option value="Gold" style="background-color: Gold;">Gold</option>
+                    <option value="Khaki" style="background-color: Khaki;">Khaki</option>
+                    <option value="GoldenRod" style="background-color: GoldenRod;">GoldenRod</option>
+                    <option value="GreenYellow" style="background-color: GreenYellow;">GreenYellow</option>
+                    <option value="YellowGreen" style="background-color: YellowGreen;">YellowGreen</option>
+                    <option value="SpringGreen" style="background-color: SpringGreen;">SpringGreen</option>
+                    <option value="Chartreuse" style="background-color: Chartreuse;">Chartreuse</option>
+                    <option value="SeaGreen" style="background-color: SeaGreen; color: white;">SeaGreen</option>
+                    <option value="MediumAquamarine" style="background-color: MediumAquamarine;">MediumAquamarine</option>
+                    <option value="Teal" style="background-color: Teal; color: white;">Teal</option>
+                    <option value="Turquoise" style="background-color: Turquoise;">Turquoise</option>
+                    <option value="LightSkyBlue" style="background-color: LightSkyBlue;">LightSkyBlue</option>
+                    <option value="CornflowerBlue" style="background-color: CornflowerBlue;">CornflowerBlue</option>
+                    <option value="MediumBlue" style="background-color: MediumBlue; color: white;">MediumBlue</option>
+                    <option value="MidnightBlue" style="background-color: MidnightBlue; color: white;">MidnightBlue</option>
+                    <option value="Indigo" style="background-color: Indigo; color: white;">Indigo</option>
+                    <option value="DarkSlateBlue" style="background-color: DarkSlateBlue; color: white;">DarkSlateBlue</option>
+                    <option value="Orchid" style="background-color: Orchid;">Orchid</option>
+                    <option value="DarkOrchid" style="background-color: DarkOrchid;">DarkOrchid</option>
+                    <option value="Magenta" style="background-color: Magenta;">Magenta</option>
+                    <option value="Plum" style="background-color: Plum;">Plum</option>
+                </select>
+
+                <label> Select a box (1-100): 
+                </label>
+                <input type="number" id="box" name="box" value="<%= data.box %>">
+                
+                <label> Artist name:
+                </label>
+                <input type="text" id="artist" name="artist" value="<%= data.artist %>">
+            
+                <label> <em>(Optional)</em> Comment:
+                </label>
+
+                <label>
+                <textarea name="comment"></textarea>
+                </label>
+                
+                <% if (errors) { %>
+                    <ul class="errors">
+                        <% errors.forEach((error) => { %>
+                            <li><%= error %></li>
+                        <% }); %>
+                    </ul>
+                <% } %>
+
+                <button id="submit">Submit</button>
+                <p id="confirm"></p>
+            </form>
+        </main>
+    </div>
+</body>
+<footer>
+    <p><a href="/">dot dot dot &copy;</a></p>
+</footer>
+</html>

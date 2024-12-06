@@ -1,0 +1,247 @@
+/*Styles for all devices*/
+* {
+    box-sizing: border-box;
+}
+
+main {
+    border-radius: 100px;
+    background-color: mintcream;
+    /* align-items: center; */
+    justify-content: center;
+    margin-bottom: 4em;
+}
+
+body, button, select {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+}
+
+select option {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    /* display: flex; */
+    text-align: center;
+    justify-items: center;
+}
+
+label {
+    display: block;
+    padding: 0.5em 0 0.5em 0;
+}
+
+input {
+    display: block;
+}
+
+select {
+    display: block;
+}
+
+textarea {
+    display: block;
+}
+
+button {
+    border-radius: 1em;
+    width: 15em;
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.25em 0 0.25em 0;
+    border: none;
+    color: white;
+    background-color: black;
+    border: 0.5px solid mintcream;
+}
+
+button:hover {
+    color: black;
+    background-color: mintcream;
+    border: 0.5px solid black;
+}
+
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    width: 20px;
+    height: 20px;
+}
+
+.errors {
+    color: red;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+}
+
+.dot a {
+    color: mintcream;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.dot:hover {
+    background-color: black;
+    border: 1px solid mintcream;
+}
+
+footer {
+    color: white;
+    /* margin-top: auto; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+}
+   
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/*Styles for mobile devices*/
+@media (max-width: 480px) {
+
+    main {
+        width: 85%;
+        justify-self: center;
+        padding: 3em;
+    }
+
+    .home-flexbox {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 60%;
+        margin: auto;
+        margin-top: 5em;
+    }
+
+    .home-flexbox .dot {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .dot {
+        background-color: mintcream;
+        border-radius: 50%;
+        align-content: center;
+        text-align: center;
+        margin: .5em 1em 1em 1em;
+        width: 75px;
+        height: 75px;
+    }
+
+
+}
+
+@media (max-width: 1023px) {
+
+    main {
+        width: 85%;
+        justify-self: center;
+        padding: 3em;
+    }
+
+    .home-flexbox {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 60%;
+        margin: auto;
+        margin-top: 5em;
+    }
+
+    .home-flexbox .dot {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .dot {
+        background-color: mintcream;
+        border-radius: 50%;
+        align-content: center;
+        text-align: center;
+        margin: .5em 1em 1em 1em;
+        width: 75px;
+        height: 75px;
+    }
+
+
+}
+
+/*Styles for mobile devices*/
+@media (min-width: 1024px) {
+
+    main {
+        margin-top: 1em;
+        width: 40%;
+        justify-self: center;
+        padding: 1em 3em 1em 3em;
+    }
+
+    #large-screen-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* background-color: red; */
+        /* width: 80%; */
+    }
+
+    #large-screen-flex-art {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        /* background-color: red; */
+        /* width: 80%; */
+    }
+
+    #large-screen-flex-art .flexbox {
+        margin-top: 1.5em;
+    }
+
+    .flexbox {
+        display: flex;
+        width: 20%;
+        margin: 0;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .home-flexbox {
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 60%;
+        margin: auto;
+        margin-top: 5em;
+    }
+    
+    .dot {
+        background-color: mintcream;
+        border: 1px solid black;
+        border-radius: 50%;
+        align-content: center;
+        text-align: center;
+        margin: .5em;
+        width: 150px;
+        height: 150px;
+    }
+}
+

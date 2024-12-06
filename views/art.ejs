@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Dot Dot</title>
+    <link rel="stylesheet" href="styles\style.css">
+</head>
+<body>
+
+    <div id="large-screen-flex-art">
+        <div class="flexbox">
+            <div class="dot"><a href="art">art</a></div>
+            <div class="dot"><a href="add">add</a></div>
+            <div class="dot"><a href="about">about</a></div>
+        </div>
+    
+        <main>
+            <h1>dot dot dot</h1>
+
+            <table>
+                <% for (let i = 1; i <=100; i++) { %>
+                    <% if (i % 10 == 1) { %>
+                        <tr>
+                    <% } %>
+                    
+                    
+
+                    <td <% art.forEach(dot => {%>
+                            <% if (dot.box == i) { %>
+                        bgcolor="<%=dot.color%>"
+                    <% } %> 
+                    <% }); %> >
+                    
+                    </td>
+
+                    <% if (i % 10 == 0) { %>
+                        </tr>
+                    <% } %>
+                <% } %>
+            </table>
+            <br>
+
+            <h2>Artist Credit</h2>
+            <ul>
+            <% art.forEach (add => {%>
+                <li><b><%=add.artist%></b> added <span style="color:<%=add.color%>"><%=add.color%></span> to <%=add.box%>.
+                <% if (add.comm.length != 0) { %>
+                    <em>"<%= add.comm %>"</em>
+                <% } %>
+            </li>
+            <% }); %>
+            </ul>
+        </main>
+    </div>
+</body>
+<footer>
+    <p><a href="/">dot dot dot &copy;</a></p>
+</footer>
+</html>
