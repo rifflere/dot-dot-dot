@@ -148,7 +148,7 @@ footer a {
 
 }
 
-@media (max-width: 1023px) {
+@media (min-width: 481px) and (max-width: 1023px) {
 
     main {
         width: 85%;
@@ -181,6 +181,10 @@ footer a {
         height: 75px;
     }
 
+    #oops {
+        align-items: center;
+    }
+
 
 }
 
@@ -190,6 +194,7 @@ footer a {
     main {
         margin-top: 1em;
         width: 40%;
+        height: 60%;
         justify-self: center;
         padding: 1em 3em 1em 3em;
     }
@@ -228,9 +233,15 @@ footer a {
         flex-direction:row;
         align-items: center;
         justify-content: space-evenly;
+        height: 100%;
         width: 60%;
         margin: auto;
         margin-top: 5em;
+    }
+
+    .home-flexbox .dot {
+        width: 250px;
+        height: 250px;
     }
     
     .dot {

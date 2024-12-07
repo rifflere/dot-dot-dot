@@ -19,13 +19,13 @@
             <h1>dot dot dot</h1>
 
             <table>
+                <!-- This loop counts from 1 to 100-->
                 <% for (let i = 1; i <=100; i++) { %>
+                    <!-- If i is 1, 11, 21, 31, etc., start new row -->
                     <% if (i % 10 == 1) { %>
                         <tr>
                     <% } %>
-                    
-                    
-
+                    <!-- iterate through art table, add colors to boxes -->
                     <td <% art.forEach(dot => {%>
                             <% if (dot.box == i) { %>
                         bgcolor="<%=dot.color%>"
@@ -33,7 +33,7 @@
                     <% }); %> >
                     
                     </td>
-
+                    <!-- If i is 10, 20, 30, 40, etc., end row-->
                     <% if (i % 10 == 0) { %>
                         </tr>
                     <% } %>
